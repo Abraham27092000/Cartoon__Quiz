@@ -28,7 +28,7 @@ const preguntas = [
     {
         pregunta: "3. Cómo nació Jake en Hora de Aventura?",
         respuestas: {
-            a: "Nació en un experimento de la Dulce Princesa ",
+            a: "Nació en un experimento de la Dulce Princesa",
             b: "Nació de una protuberancia en la cabeza de su padre",
             c: "Siempre se mantuvo en secreto su procedencia",
             d: "Nació por obra y creación del dios Grob Gob Glob Grod"
@@ -37,7 +37,7 @@ const preguntas = [
     },
 
     {
-        pregunta: "4. ¿En la seria Laboratorio de Dexter, cuál es la edad del protagonista?",
+        pregunta: "4. ¿En la serie Laboratorio de Dexter, cuál es la edad del protagonista?",
         respuestas: {
             a: "13",
             b: "9",
@@ -169,6 +169,27 @@ const preguntas = [
     },
 ];
 
-function mostrarcuestionario(){
+function mostrarCuestionario(){
+    const preguntasYrespuestas = [];
 
+    preguntas.forEach((preguntaActual, numerodePregunta) =>{
+        const respuestas = [];
+        for(letraRespuesta in preguntaActual.respuestas){
+            respuestas.push(
+                `<label>
+                    <input type="radio" name="${numerodePregunta}" value="${letraRespuesta}">
+                    ${letraRespuesta} :${preguntaActual.respuestas[letraRespuesta]}
+
+                </label>`
+            );
+        }
+        preguntasYrespuestas.push(
+            `<div class="cuestionario"> ${preguntaActual.pregunta} </div>
+                <div class="respuestas"> ${respuestas.join('')}</div>
+            `
+        );
+    })
+    contenedor.innerHTML = preguntasYrespuestas.join('');
 }
+
+mostrarCuestionario();
