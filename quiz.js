@@ -1,6 +1,8 @@
 //Cuestionario
 
-const contenedor = document .getElementById("cuestionario")
+const contenedor = document .getElementById ("cuestionario");
+const botonRespuesta = document .getElementById ("boton");
+const resultadoQuiz = document .getElementById ("resultado");
 
 const preguntas = [
     {
@@ -193,3 +195,28 @@ function mostrarCuestionario(){
 }
 
 mostrarCuestionario();
+
+function mostrarResultado(){
+    const respuestas = contenedor.querySelectorAll(".respuestas");
+    let respuestasCorrectas = 0;
+
+    preguntas.forEach((preguntaActual, numerodePregunta) =>{
+        const todaslasRespuestas = respuestas[numerodePregunta];
+        const checkboxRespuestas = `input[name='${numerodePregunta}']:checked`;
+        const respuestaElegida = (todaslasRespuestas.querySelector(checkboxRespuestas)|| {}).value;
+        
+        if(respuestaElegida === preguntaActual.respuestaCorrecta){
+            respuestasCorrectas++;
+
+            respuestas[numerodePregunta].style.color = `blue`;
+
+        } else{
+            respuestas[numerodePregunta].style.color = `red`;
+        }
+    })
+
+    resultadoQuiz.innerHTML = 'Usted acerto' + respuestasCorrectas + 'preguntas de un total de' + preguntas.length
+
+}
+
+botonRespuesta.addEventListener('click', mostrarResultado);
