@@ -9,7 +9,7 @@ if (prompt = nombre){
 } 
 
 else {
-    alert("No has introducido tu nombre!. Recarga la página");
+    alert("¡No has introducido tu nombre!. Recarga la página");
 }
 
 console.log(nombre);
@@ -20,7 +20,7 @@ const contenedor = document .getElementById ("cuestionario");
 const botonRespuesta = document .getElementById ("boton");
 const resultadoQuiz = document .getElementById ("resultado");
 
-const preguntas = [
+let preguntas = [
     {
         pregunta : "1. ¿Cuál es el mensaje principal de la serie Scooby-Doo?",
         respuestas: {
@@ -186,6 +186,17 @@ const preguntas = [
         respuestaCorrecta: "d"
     },
 ];
+
+//------JSON------//
+
+let preguntas_JSON = JSON.stringify(preguntas);
+
+console.log (preguntas);
+console.log (preguntas_JSON);
+
+//--LocalStorage--//
+
+localStorage.setItem("preguntas", preguntas_JSON);
 
 //Mostrar el cuestionario
 
