@@ -1,19 +1,3 @@
-//Prompt datos y bienvenida
-
-let nombre;
-
-nombre = prompt("Introduce tu nombre:");
-
-if (prompt = nombre){
-    alert("¡Bienvenido al Cartoon-Quiz! " + nombre);
-} 
-
-else {
-    alert("¡No has introducido tu nombre!. Recarga la página");
-}
-
-console.log(nombre);
-
 //Cuestionario
 
 const contenedor = document .getElementById ("cuestionario");
