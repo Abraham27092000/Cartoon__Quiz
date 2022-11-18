@@ -1,0 +1,32 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+}
+
+.cuestionario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2em;
+    height: 2em;
+    margin-top: 1em;
+    
+}
+
+.respuestas {
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    color:gray;
+    font-size: 1.5em;
+    height: 3em;
+    margin: 1em;
+    color: black;
+}
+
+.button {
+    display:flex;
+    align-items: center;
+}

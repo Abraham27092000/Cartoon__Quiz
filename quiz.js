@@ -4,10 +4,10 @@ const contenedor = document .getElementById ("cuestionario");
 const botonRespuesta = document .getElementById ("boton");
 const resultadoQuiz = document .getElementById ("resultado");
 
-let preguntas = [
+const preguntas = [ 
     {
         pregunta : "1. ¿Cuál es el mensaje principal de la serie Scooby-Doo?",
-        respuestas: {
+        respuestas: { 
             a: "Todos necesitamos una scooby galleta.",
             b: "No dejes que el miedo te detenga.",
             c: "Los monstruos no existen.",
@@ -235,3 +235,7 @@ function mostrarResultado(){
 }
 
 botonRespuesta.addEventListener('click', mostrarResultado);
+
+
+
+
