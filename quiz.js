@@ -173,7 +173,7 @@ const preguntas = [
 
 //------JSON------//
 
-let preguntas_JSON = JSON.stringify(preguntas);
+let preguntas_JSON = JSON.stringify(preguntas);;
 
 console.log (preguntas);
 console.log (preguntas_JSON);
