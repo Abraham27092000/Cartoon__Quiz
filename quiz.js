@@ -72,7 +72,7 @@ const preguntas = [
     },
 
     {
-        pregunta: "7. ¿Por qué Puro hueso se une a los protagonistas de la serie de Las Sombrías Aventuras de Billy & Mandy?",
+        pregunta: "7. ¿Por qué Puro hueso se une a los protagonistas en Las Sombrías Aventuras de Billy/Mandy?",
         respuestas: {
             a: "Lo hace por voluntad propia",
             b: "Pierde un combate",
@@ -223,10 +223,10 @@ function mostrarResultado(){
         if(respuestaElegida === preguntaActual.respuestaCorrecta){
             respuestasCorrectas++;
 
-            respuestas[numerodePregunta].style.color = `blue`;
+            respuestas[respuestaElegida].style.color = `blue`;
 
         } else{
-            respuestas[numerodePregunta].style.color = `red`;
+            respuestas[respuestaElegida].style.color = `red`;
         }
     })
 
