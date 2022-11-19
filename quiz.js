@@ -223,10 +223,10 @@ function mostrarResultado(){
         if(respuestaElegida === preguntaActual.respuestaCorrecta){
             respuestasCorrectas++;
 
-            respuestas[respuestaElegida].style.color = `blue`;
+            respuestas[numerodePregunta].style.color = `blue`;
 
         } else{
-            respuestas[respuestaElegida].style.color = `red`;
+            respuestas[numerodePregunta].style.color = `red`;
         }
     })
 
