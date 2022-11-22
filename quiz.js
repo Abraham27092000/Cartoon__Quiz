@@ -171,16 +171,18 @@ const preguntas = [
     },
 ];
 
-//------JSON------//
+//Dark Mode
 
-let preguntas_JSON = JSON.stringify(preguntas);;
+const btnSwitch = document.querySelector('#darkmode');
 
-console.log (preguntas);
-console.log (preguntas_JSON);
+btnSwitch.addEventListener('click',()=>{
+    document.body.classList.toggle('dark');
+    btnSwitch.classlist.toggle('active');
+})
 
-//--LocalStorage--//
+//--localStorage--//
 
-localStorage.setItem("preguntas", preguntas_JSON);
+
 
 //Mostrar el cuestionario
 
