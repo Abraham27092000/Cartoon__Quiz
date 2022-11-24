@@ -80,6 +80,10 @@ span{
     margin-top: 1em;
 }
 
+.cuestionario.dark{
+    color:black;
+}
+
 .respuestas {
     display: flex;
     flex-direction: column;

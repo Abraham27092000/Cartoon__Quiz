@@ -177,8 +177,16 @@ const btnSwitch = document.querySelector('#darkmode');
 
 btnSwitch.addEventListener('click',()=>{
     document.body.classList.toggle('dark');
-    btnSwitch.classlist.toggle('active');
+    btnSwitch.classList.toggle('active');
 })
+
+const cuestionario = document.getElementById('cuestionario');
+
+cuestionario.classList.toggle('dark');
+
+const resultado = document.getElementById('resultado');
+
+resultado.classList.toggle('dark');
 
 //--localStorage--//
 
