@@ -20,7 +20,7 @@ body.dark{
 }
 
 .titulo{
-    color: yellow;
+    color: green;
 }
 
 .switch{
@@ -89,15 +89,10 @@ span{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color:gray;
+    color:#304352;
     font-size: 1.5em;
     height: 3em;
     margin:1em;
-    color: gray;
-}
-
-.respuestas.dark{
-    color:black;
 }
 
 .button {
