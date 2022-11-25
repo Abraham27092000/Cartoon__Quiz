@@ -220,7 +220,6 @@ function mostrarCuestionario(){
                 `<label>
                     <input type="radio" name="${numerodePregunta}" value="${letraRespuesta}">
                     ${letraRespuesta} :${preguntaActual.respuestas[letraRespuesta]}
-
                 </label>`
             );
         }
@@ -261,7 +260,3 @@ function mostrarResultado(){
 }
 
 botonRespuesta.addEventListener('click', mostrarResultado);
-
-
-
-
