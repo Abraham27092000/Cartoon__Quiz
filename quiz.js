@@ -208,6 +208,12 @@ document.body.classList.remove('dark');
 btnSwitch.classList.remove('active');
 }
 
+//JSON
+
+let preguntas_JSON = JSON.stringify(preguntas);
+
+localStorage.setItem("preguntas", preguntas_JSON);
+
 //Mostrar el cuestionario
 
 function mostrarCuestionario(){
