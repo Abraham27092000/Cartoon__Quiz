@@ -172,7 +172,6 @@ const preguntas = [
 ];
 
 //Dark Mode
-
 const btnSwitch = document.querySelector('#darkmode');
 
 const cuestionario = document.getElementsByClassName('cuestionario');
@@ -183,19 +182,24 @@ btnSwitch.addEventListener('click',()=>{
         item.classList.toggle('dark');
     }
     resultado.classList.toggle('dark');
+
+    if(document.body.classList.contains('dark')){
+        localStorage.setItem('dark-mode', 'true');
+    } else {
+        localStorage.setItem('dark-mode', 'false');
+    }
 })
 
 //--localStorage--//
 
-// Guardamos el modo en localstorage.
+// Guardar el modo-dark en localstorage.
 if(document.body.classList.contains('dark')){
     localStorage.setItem('dark-mode', 'true');
 } else {
     localStorage.setItem('dark-mode', 'false');
 }
 
-
-// Obtenemos el modo actual.
+// Obtener el modo-dark actual.
 if(localStorage.getItem('dark-mode') === 'true'){
 document.body.classList.add('dark');
 btnSwitch.classList.add('active');
@@ -240,7 +244,7 @@ function mostrarResultado(){
     preguntas.forEach((preguntaActual, numerodePregunta) =>{
         const todaslasRespuestas = respuestas[numerodePregunta];
         const checkboxRespuestas = `input[name='${numerodePregunta}']:checked`;
-        const respuestaElegida = (todaslasRespuestas.querySelector(checkboxRespuestas)|| {}).value;
+        const respuestaElegida = (todaslasRespuestas.querySelector(checkboxRespuestas)|| {}).value ;
         
         if(respuestaElegida === preguntaActual.respuestaCorrecta){
             respuestasCorrectas++;
@@ -252,11 +256,13 @@ function mostrarResultado(){
         }
     })
 
-    resultadoQuiz.innerHTML = 'Usted acerto' + respuestasCorrectas + 'preguntas de un total de' + preguntas.length
+    resultadoQuiz.innerHTML = 'Usted acerto' + respuestasCorrectas + 'pregunta de un total de' + preguntas.length
 
 }
 
+function botonRespuesta(){
 botonRespuesta.addEventListener('click', mostrarResultado);
+}
 
 
 
