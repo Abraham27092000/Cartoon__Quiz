@@ -260,9 +260,7 @@ function mostrarResultado(){
 
 }
 
-function botonRespuesta(){
 botonRespuesta.addEventListener('click', mostrarResultado);
-}
 
 
 
